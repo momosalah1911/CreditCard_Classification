@@ -2,16 +2,16 @@
 ![Credit Card Fraud](https://static.vecteezy.com/system/resources/previews/001/883/786/large_2x/set-scenes-hacker-with-laptop-and-credit-card-during-covid-19-pandemic-free-vector.jpg)
 
 *Objective: 
--Detect fraudulent credit card transactions in a dataset containing transactions by European cardholders in September 2013.
+  -Detect fraudulent credit card transactions in a dataset containing transactions by European cardholders in September 2013.
 
 *Dataset Overview:
--Highly unbalanced class distribution: 0.172% frauds out of 284,807 transactions.
--Features are numerical, resulting from PCA, with 'Time' and 'Amount' as non-transformed features.
--'Class' is the response variable (1 for fraud, 0 otherwise).
+   -Highly unbalanced class distribution: 0.172% frauds out of 284,807 transactions.
+   -Features are numerical, resulting from PCA, with 'Time' and 'Amount' as non-transformed features.
+   -'Class' is the response variable (1 for fraud, 0 otherwise).
 
 ## Conclusion
-*dataset does not have missing value
-*dataset have doublicated value (448 instance is doublicated in train dataset 8 in class fraud )
+* dataset does not have missing value
+* dataset have doublicated value (448 instance is doublicated in train dataset 8 in class fraud )
 * 0.2 % from data belongs to Class Fraud (impalance dataset)
 * Amount:
   -have alot of outliers (18823 object is outliers)
@@ -32,6 +32,7 @@
   -number of rows in class NO Faurd after remove outliers 72166
   -number of rows in class Fraud after remove outliers 9
 *most important features :
+
 ![most important features](https://github.com/momosalah1911/CreditCard_Classification/assets/113562712/7ab83273-f598-410c-bc56-f16fe1ff8c4c)
 
 ### Modiling Trics:
