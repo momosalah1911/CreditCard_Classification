@@ -20,9 +20,9 @@
    obtain some event through them to help the model predict. Let us discover 
    that.
   - very skewness
-*Time:
+* Time:
   - convert it from second to hour
-*V(1->28):
+* V(1->28):
   - V17,V14 and V12 have high negative skew (less than -0.25)
   - features have large number of outliers you can drop it or not but let try to show data after drop it and after it well be decide if drop it or not
   - number of rows after befor outliers (170436, 33)
@@ -31,7 +31,7 @@
   - we lost 42.35 % from data
   - number of rows in class NO Faurd after remove outliers 72166
   - number of rows in class Fraud after remove outliers 9
-*most important features :
+* most important features :
 
 ![most important features](https://github.com/momosalah1911/CreditCard_Classification/assets/113562712/7ab83273-f598-410c-bc56-f16fe1ff8c4c)
 
@@ -57,13 +57,13 @@
 | ANN   | 0.786    | 0.620             | 0.871   | 0.999    |
 | VC    | 0.672    | 0.496             | 0.758   | 0.999    |
 
-*try to check result of multiple model to deal with dataset (implance dataset)without tuning this model 
+* try to check result of multiple model to deal with dataset (implance dataset)without tuning this model 
 > [!NOTE]
 > Avoid Data Leakage: Apply under-sampling, over-sampling, or SMOTE techniques only to the training set.
     This helps prevent data leakage and ensures that the test set remains representative of real-world scenarios.
-
 > Evaluate Carefully: After applying these techniques, carefully evaluate your model's performance on both the training and test sets.
     Consider metrics like precision, recall, F1-score, and area under the ROC curve (AUC-ROC) to assess performance.
+
 
  * Result(F1_score) with Train dataset 
 | Model               | None   | Over Sampling | STOME | Under Sampling |
@@ -86,9 +86,9 @@
 | Voting Classifier    | 0.718  | 0.833         | 0.832 | 0.724          |
 
 > [!IMPORTANT]
->Performance improved on training data using different methods, but failed to generalize to test data
+> Performance improved on training data using different methods, but failed to generalize to test data
 
-*try to tuning different model using grid search with cross validation and can also using thresholds
+* try to tuning different model using grid search with cross validation and can also using thresholds
 
  1- logistic regression 
     best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
