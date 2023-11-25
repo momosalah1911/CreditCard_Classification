@@ -2,12 +2,12 @@
 ![Credit Card Fraud](https://static.vecteezy.com/system/resources/previews/001/883/786/large_2x/set-scenes-hacker-with-laptop-and-credit-card-during-covid-19-pandemic-free-vector.jpg)
 
 * Objective: 
-  -Detect fraudulent credit card transactions in a dataset containing transactions by European cardholders in September 2013.
+  - Detect fraudulent credit card transactions in a dataset containing transactions by European cardholders in September 2013.
 
 * Dataset Overview:
-   -Highly unbalanced class distribution: 0.172% frauds out of 284,807 transactions.
-   -Features are numerical, resulting from PCA, with 'Time' and 'Amount' as non-transformed features.
-   -'Class' is the response variable (1 for fraud, 0 otherwise).
+   - Highly unbalanced class distribution: 0.172% frauds out of 284,807 transactions.
+   - Features are numerical, resulting from PCA, with 'Time' and 'Amount' as non-transformed features.
+   - 'Class' is the response variable (1 for fraud, 0 otherwise).
 
 ## Conclusion
 * dataset does not have missing value
