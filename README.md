@@ -14,29 +14,29 @@
 * dataset have doublicated value (448 instance is doublicated in train dataset 8 in class fraud )
 * 0.2 % from data belongs to Class Fraud (impalance dataset)
 * Amount:
-  -have alot of outliers (18823 object is outliers)
-  -From this scene, it can be concluded that there are many outliers, but 
+  - have alot of outliers (18823 object is outliers)
+  - From this scene, it can be concluded that there are many outliers, but 
    getting rid of them is not the best solution. Rather, it is possible to 
    obtain some event through them to help the model predict. Let us discover 
    that.
-  -very skewness
+  - very skewness
 *Time:
-  -convert it from second to hour
+  - convert it from second to hour
 *V(1->28):
-  -V17,V14 and V12 have high negative skew (less than -0.25)
-  -features have large number of outliers you can drop it or not but let try to show data after drop it and after it well be decide if drop it or not
-  -number of rows after befor outliers (170436, 33)
-  -number of rows after remove outliers (72175, 33)
-  -number of rows are removed 98261
-  -we lost 42.35 % from data
-  -number of rows in class NO Faurd after remove outliers 72166
-  -number of rows in class Fraud after remove outliers 9
+  - V17,V14 and V12 have high negative skew (less than -0.25)
+  - features have large number of outliers you can drop it or not but let try to show data after drop it and after it well be decide if drop it or not
+  - number of rows after befor outliers (170436, 33)
+  - number of rows after remove outliers (72175, 33)
+  - number of rows are removed 98261
+  - we lost 42.35 % from data
+  - number of rows in class NO Faurd after remove outliers 72166
+  - number of rows in class Fraud after remove outliers 9
 *most important features :
 
 ![most important features](https://github.com/momosalah1911/CreditCard_Classification/assets/113562712/7ab83273-f598-410c-bc56-f16fe1ff8c4c)
 
 ### Modiling Trics:
- *when apply model without using any technique to deal with impalance dataset 
+ * when apply model without using any technique to deal with impalance dataset 
  * Result with Train dataset
    
 | Model | F1 Score | Average Precision | ROC AUC | Accuracy |
