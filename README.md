@@ -107,18 +107,18 @@
      - best_threshold_train  0.8023952095808383
     
  2-XGB
- -best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
+ - best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
  
 | State | F1 Score | Average Precision | ROC AUC | Accuracy |
 |-------|----------|-------------------|---------|----------|
 | Train | 0.904    | 0.822             | 0.919   | 0.999    |
 | Test  | 0.873    | 0.767             | 0.904   | 0.999    |
 
-  -used different thresholds
-      -best threshold for train : 0.28970808 
-      -best_f1_score_train 0.9281961471103328
-      -f1 score for test with threshold from best_threshold_train and 
-      -best_threshold_train  0.874251497005988
+  - used different thresholds
+      - best threshold for train : 0.28970808 
+      - best_f1_score_train 0.9281961471103328
+      - f1 score for test with threshold from best_threshold_train and 
+      - best_threshold_train  0.874251497005988
 
   3- Neural Network
     - best_parameters  :  {'max_iter': 500, 'hidden_layer_sizes': (20, 10, 5)}
