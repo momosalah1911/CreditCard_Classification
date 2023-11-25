@@ -1,10 +1,10 @@
 # CreditCard_Classification
 ![Credit Card Fraud](https://static.vecteezy.com/system/resources/previews/001/883/786/large_2x/set-scenes-hacker-with-laptop-and-credit-card-during-covid-19-pandemic-free-vector.jpg)
 
-*Objective: 
+* Objective: 
   -Detect fraudulent credit card transactions in a dataset containing transactions by European cardholders in September 2013.
 
-*Dataset Overview:
+* Dataset Overview:
    -Highly unbalanced class distribution: 0.172% frauds out of 284,807 transactions.
    -Features are numerical, resulting from PCA, with 'Time' and 'Amount' as non-transformed features.
    -'Class' is the response variable (1 for fraud, 0 otherwise).
@@ -38,7 +38,8 @@
 ### Modiling Trics:
  *when apply model without using any technique to deal with impalance dataset 
  * Result with Train dataset
- | Model | F1 Score | Average Precision | ROC AUC | Accuracy |
+   
+| Model | F1 Score | Average Precision | ROC AUC | Accuracy |
 |-------|----------|-------------------|---------|----------|
 | LR    | 0.672    | 0.482             | 0.769   | 0.999    |
 | RF    | 1.000    | 1.000             | 1.000   | 1.000    |
