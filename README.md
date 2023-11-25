@@ -92,7 +92,7 @@
 * try to tuning different model using grid search with cross validation and can also using thresholds
 
  1- logistic regression 
-    best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
+  -best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
 
   | State | F1 Score | Average Precision | ROC AUC | Accuracy | 
   |--------|--------|-------------------|-------|---------|
@@ -106,7 +106,7 @@
      - best_threshold_train  0.8023952095808383
     
  2-XGB
- best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
+ -best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
  
 | State | F1 Score | Average Precision | ROC AUC | Accuracy |
 |-------|----------|-------------------|---------|----------|
