@@ -92,14 +92,14 @@
 * try to tuning different model using grid search with cross validation and can also using thresholds
 
  1- logistic regression 
-  -best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
+  - best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
 
   | State | F1 Score | Average Precision | ROC AUC | Accuracy | 
   |--------|--------|-------------------|-------|---------|
   |  Train | 0.686071  |         0.498963 | 0.777722 | 0.999114|
   |   Test | 0.693878   |        0.504542 | 0.786455  |0.999209|
   
-  -used different thresholds
+  - used different thresholds
      - best threshold for train : 0.10023508103303037 
      - best_f1_score_train 0.8014311270125224
      - f1 score for test with threshold from average best_threshold_test and 
@@ -119,18 +119,18 @@
       -f1 score for test with threshold from best_threshold_train and 
       -best_threshold_train  0.874251497005988
 
-  3-Neural Network
-      best_parameters  :  {'max_iter': 500, 'hidden_layer_sizes': (20, 10, 5)}
+  3- Neural Network
+    - best_parameters  :  {'max_iter': 500, 'hidden_layer_sizes': (20, 10, 5)}
 
-  | State | F1 Score | Average Precision | ROC AUC | Accuracy |
+| State | F1 Score | Average Precision | ROC AUC | Accuracy |
 |-------|----------|-------------------|---------|----------|
 | Train | 0.812    | 0.667             | 0.867   | 0.999    |
 | Test  | 0.805    | 0.653             | 0.871   | 0.999    |
 
--used different thresholds
-  -best threshold for train : 0.8651446871097714 
-  -best_f1_score_train 0.8245931283905967
-  -f1 score for test with threshold from best_threshold_train and best_threshold_train  0.7926829268292682
+- used different thresholds
+  - best threshold for train : 0.8651446871097714 
+  - best_f1_score_train 0.8245931283905967
+  - f1 score for test with threshold from best_threshold_train and best_threshold_train  0.7926829268292682
 
   4- RAndom Forest
   
@@ -139,10 +139,10 @@
 | Train | 0.951    | 0.906             | 0.956   | 0.999    |
 | Test  | 0.870    | 0.765             | 0.893   | 0.999    |
 
--used different thresholds
-  -Best Threshold for Train: 0.339
-  -best threshold for train : 0.33920634920634923 
-  -best_f1_score_train 0.9816971713810316
+- used different thresholds
+  - Best Threshold for Train: 0.339
+  - best threshold for train : 0.33920634920634923 
+  - best_f1_score_train 0.9816971713810316
 
 
  
