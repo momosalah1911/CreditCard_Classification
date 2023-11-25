@@ -100,11 +100,11 @@
   |  Train | 0.686071  |         0.498963 | 0.777722 | 0.999114|
   |   Test | 0.693878   |        0.504542 | 0.786455  |0.999209|
   
-    - used different thresholds
-       - best threshold for train : 0.10023508103303037 
-       - best_f1_score_train 0.8014311270125224
-       - f1 score for test with threshold from average best_threshold_test and 
-       - best_threshold_train  0.8023952095808383
+  - used different thresholds
+     - best threshold for train : 0.10023508103303037 
+     - best_f1_score_train 0.8014311270125224
+     - f1 score for test with threshold from average best_threshold_test and 
+     - best_threshold_train  0.8023952095808383
     
  2-XGB
  -best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
