@@ -57,7 +57,7 @@
 | ANN   | 0.786    | 0.620             | 0.871   | 0.999    |
 | VC    | 0.672    | 0.496             | 0.758   | 0.999    |
 
-* try to check result of multiple model to deal with dataset (implance dataset)without tuning this model 
+
 > [!NOTE]
 > Avoid Data Leakage: Apply under-sampling, over-sampling, or SMOTE techniques only to the training set.
     This helps prevent data leakage and ensures that the test set remains representative of real-world scenarios.
@@ -65,6 +65,7 @@
 > Evaluate Carefully: After applying these techniques, carefully evaluate your model's performance on both the training and test sets.
     Consider metrics like precision, recall, F1-score, and area under the ROC curve (AUC-ROC) to assess performance.
 
+* try different techniques (under-sampling, over-sampling, or SMOTE techniques) and check result
 
 * Result(F1_score) with Train dataset
   
