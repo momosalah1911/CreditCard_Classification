@@ -103,8 +103,7 @@
   - used different thresholds
      - best threshold for train : 0.10023508103303037 
      - best_f1_score_train 0.8014311270125224
-     - f1 score for test with threshold from average best_threshold_test and 
-     - best_threshold_train  0.8023952095808383
+     - f1 score for test with threshold from average best_threshold_Train   0.8023952095808383
     
  2-XGB
  - best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
@@ -117,8 +116,7 @@
   - used different thresholds
       - best threshold for train : 0.28970808 
       - best_f1_score_train 0.9281961471103328
-      - f1 score for test with threshold from best_threshold_train and 
-      - best_threshold_train  0.874251497005988
+      - f1 score for test with threshold from best_threshold_train   0.874251497005988
 
   3- Neural Network
     - best_parameters  :  {'max_iter': 500, 'hidden_layer_sizes': (20, 10, 5)}
@@ -131,22 +129,23 @@
 - used different thresholds
   - best threshold for train : 0.8651446871097714 
   - best_f1_score_train 0.8245931283905967
-  - f1 score for test with threshold from best_threshold_train and best_threshold_train  0.7926829268292682
+  - f1 score for test with threshold from best_threshold_train   0.7926829268292682
 
   4- RAndom Forest
-  
+  - parameters => (min_samples_split=6, n_estimators=30)
+
 | State | F1 Score | Average Precision | ROC AUC | Accuracy |
 |-------|----------|-------------------|---------|----------|
 | Train | 0.951    | 0.906             | 0.956   | 0.999    |
 | Test  | 0.870    | 0.765             | 0.893   | 0.999    |
 
 - used different thresholds
-  - Best Threshold for Train: 0.339
   - best threshold for train : 0.33920634920634923 
   - best_f1_score_train 0.9816971713810316
+  - f1 score for test with threshold from  best_threshold_train   0.874251497005988
 
 
- 
+
 
 
 
