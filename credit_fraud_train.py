@@ -74,8 +74,8 @@ if __name__ == '__main__':
     try to check result of multiple model to deal with dataset (implance dataset)
     without tuning this mode or deal with impalance data by over sampling ore under sampling or both  
     '''
-    # train_and_eval_model_without_dealing_impalance_data_and_without_tuning(
-    #     y_train, X_train, y_test, X_test)
+    train_and_eval_model_without_dealing_impalance_data_and_without_tuning(
+        y_train, X_train, y_test, X_test)
     '''
     result in train of it is :
     models  f1_score  average percesion       ROC  accuracy
@@ -104,10 +104,10 @@ result in test :
     without tuning this model 
     but deal with different techniques (over sampling , under samoling ,STOME ) 
     '''
-    # x = LRegression
-    # print('LRegression')
-    # different_technique_to_deal_with_impalance_data(
-    #     df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x)
+    x = LRegression
+    print('LRegression')
+    different_technique_to_deal_with_impalance_data(
+        df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x)
     '''
     Logistic Regression with different techniques
     technique  f1_score_train  f1_score_val
@@ -118,10 +118,10 @@ result in test :
 
     '''
 
-    # x2 = model_NN
-    # print('model_NN')
-    # different_technique_to_deal_with_impalance_data(
-    #     df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x2)
+    x2 = model_NN
+    print('model_NN')
+    different_technique_to_deal_with_impalance_data(
+        df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x2)
     '''
     technique  f1_score_train  f1_score_val
     0             None        0.795775      0.785714
@@ -130,10 +130,10 @@ result in test :
     3  under sampling         0.917857      0.254486
 
     '''
-    # x3 = eXtreme_Gradient_Boosting
-    # print('eXtreme_Gradient_Boosting')
-    # different_technique_to_deal_with_impalance_data(
-    #     df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x3)
+    x3 = eXtreme_Gradient_Boosting
+    print('eXtreme_Gradient_Boosting')
+    different_technique_to_deal_with_impalance_data(
+        df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x3)
     '''
     eXtreme_Gradient_Boosting
             technique  f1_score_train  f1_score_val
@@ -142,10 +142,10 @@ result in test :
     2            STOME             1.0      0.789474
     3  under sampling              1.0      0.224090
     '''
-    # x4 = RandomForest
-    # print('RandomForest')
-    # different_technique_to_deal_with_impalance_data(
-    #     df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x4)
+    x4 = RandomForest
+    print('RandomForest')
+    different_technique_to_deal_with_impalance_data(
+        df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x4)
 
     '''
     RandomForest
@@ -156,10 +156,10 @@ result in test :
     3  under sampling         1.000000      0.298279
 
     '''
-    # x5 = Voting_classifier
-    # print('Voting_classifier')
-    # different_technique_to_deal_with_impalance_data(
-    #     df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x5)
+    x5 = Voting_classifier
+    print('Voting_classifier')
+    different_technique_to_deal_with_impalance_data(
+        df_train, X_train, y_train, X_test, y_test, factor=3, feature='Class', enstmaitor=x5)
     '''
     Voting_classifier
             technique  f1_score_train  f1_score_val
@@ -175,19 +175,19 @@ result in test :
     '''
     let's try to tuning Logistic model and show results without different techniques (over sampling , under samoling ,STOME ) 
     '''
-    # print('LR')
-    # model = tuning_LR(X_train, y_train, X_test, y_test)
-    # model.fit(X_train, y_train)
-    # y_prob = model.predict_proba(X_train)
-    # best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
-    #     y_train, y_prob[:, 1])
-    # print('best threshold for train :', best_threshold_train,
-    #       '\n', 'best_f1_score_train', best_f1_score_train)
-    # y_prob_test = model.predict_proba(X_test)
+    print('LR')
+    model = tuning_LR(X_train, y_train, X_test, y_test)
+    model.fit(X_train, y_train)
+    y_prob = model.predict_proba(X_train)
+    best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
+        y_train, y_prob[:, 1])
+    print('best threshold for train :', best_threshold_train,
+          '\n', 'best_f1_score_train', best_f1_score_train)
+    y_prob_test = model.predict_proba(X_test)
 
-    # f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
-    #                      threshold=best_threshold_train)
-    # print('f1 score for test with threshold from  best_threshold_train and best_threshold_train ', f1)
+    f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
+                         threshold=best_threshold_train)
+    print('f1 score for test with threshold from  best_threshold_train and best_threshold_train ', f1)
     '''
     best_parameters  :  {'class_weight': {0: 0.3, 1: 0.7}}
     state  f1_score  average percesion       ROC  accuracy
@@ -204,20 +204,20 @@ result in test :
     '''
     let's try to tuning XGB model and show results without different techniques (over sampling , under samoling ,STOME ) 
     # '''
-    # print('xgb')
-    # model = Tuning_xgb(X_train, y_train, X_test, y_test)
-    # model.fit(X_train, y_train)
-    # y_prob = model.predict_proba(X_train)
-    # y_prob_test = model.predict_proba(X_test)
-    # best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
-    #     y_train, y_prob[:, 1])
-    # print('best threshold for train :', best_threshold_train,
-    #       '\n', 'best_f1_score_train', best_f1_score_train)
+    print('xgb')
+    model = Tuning_xgb(X_train, y_train, X_test, y_test)
+    model.fit(X_train, y_train)
+    y_prob = model.predict_proba(X_train)
+    y_prob_test = model.predict_proba(X_test)
+    best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
+        y_train, y_prob[:, 1])
+    print('best threshold for train :', best_threshold_train,
+          '\n', 'best_f1_score_train', best_f1_score_train)
 
-    # f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
-    #                      threshold=best_threshold_train)
+    f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
+                         threshold=best_threshold_train)
 
-    # print('f1 score for test with threshold from  best_threshold_train  ', f1)
+    print('f1 score for test with threshold from  best_threshold_train  ', f1)
     '''
     xgb
     best_parameters  :  {'subsample': 0.8, 'n_estimators': 350, 'max_depth': 2, 'learning_rate': 0.1, 'colsample_bytree': 0.6}
@@ -235,20 +235,20 @@ result in test :
     '''
     let's try to tuning  NN model and show results without different techniques (over sampling , under samoling ,STOME ) 
     '''
-    # print('NN')
-    # model = tuning_NN(X_train, y_train, X_test, y_test)
-    # model.fit(X_train, y_train)
-    # y_prob = model.predict_proba(X_train)
-    # y_prob_test = model.predict_proba(X_test)
-    # best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
-    #     y_train, y_prob[:, 1])
-    # print('best threshold for train :', best_threshold_train,
-    #       '\n', 'best_f1_score_train', best_f1_score_train)
+    print('NN')
+    model = tuning_NN(X_train, y_train, X_test, y_test)
+    model.fit(X_train, y_train)
+    y_prob = model.predict_proba(X_train)
+    y_prob_test = model.predict_proba(X_test)
+    best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
+        y_train, y_prob[:, 1])
+    print('best threshold for train :', best_threshold_train,
+          '\n', 'best_f1_score_train', best_f1_score_train)
 
-    # f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
-    #                      threshold=best_threshold_train)
+    f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
+                         threshold=best_threshold_train)
 
-    # print('f1 score for test with threshold from  best_threshold_train  ', f1)
+    print('f1 score for test with threshold from  best_threshold_train  ', f1)
     '''
     NN
     best_parameters  :  {'max_iter': 500, 'hidden_layer_sizes': (20, 10, 5)}
@@ -267,20 +267,20 @@ result in test :
     let's try to tuning  Random forest model and show results without different techniques (over sampling , under samoling ,STOME ) 
     '''
 
-    # print('RF')
-    # model = Tuning_RandomForest(X_train, y_train, X_test, y_test)
-    # model.fit(X_train, y_train)
-    # y_prob = model.predict_proba(X_train)
-    # y_prob_test = model.predict_proba(X_test)
-    # best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
-    #     y_train, y_prob[:, 1])
-    # print('best threshold for train :', best_threshold_train,
-    #       '\n', 'best_f1_score_train', best_f1_score_train)
+    print('RF')
+    model = Tuning_RandomForest(X_train, y_train, X_test, y_test)
+    model.fit(X_train, y_train)
+    y_prob = model.predict_proba(X_train)
+    y_prob_test = model.predict_proba(X_test)
+    best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
+        y_train, y_prob[:, 1])
+    print('best threshold for train :', best_threshold_train,
+          '\n', 'best_f1_score_train', best_f1_score_train)
 
-    # f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
-    #                      threshold=best_threshold_train)
+    f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
+                         threshold=best_threshold_train)
 
-    # print('f1 score for test with threshold from  best_threshold_train  ', f1)
+    print('f1 score for test with threshold from  best_threshold_train  ', f1)
     '''
     Random forest 
     parameters => (min_samples_split=6, n_estimators=30, )
@@ -298,26 +298,26 @@ result in test :
     let's try to tuning  Random forest model and show results without different techniques (over sampling , under samoling ,STOME ) 
     '''
 
-    # print('Voting')
-    # rf = RandomForestClassifier(min_samples_split=6, n_estimators=30)
-    # xgb = xgb.XGBClassifier(subsample=0.8, n_estimators=350,
-    #                         max_depth=2, learning_rate=0.1, colsample_bytree=0.6)
-    # classifier = [('lr', xgb), ('rf', rf)]
+    print('Voting')
+    rf = RandomForestClassifier(min_samples_split=6, n_estimators=30)
+    xgb = xgb.XGBClassifier(subsample=0.8, n_estimators=350,
+                            max_depth=2, learning_rate=0.1, colsample_bytree=0.6)
+    classifier = [('lr', xgb), ('rf', rf)]
 
-    # vc = VotingClassifier(estimators=classifier, voting='soft')
+    vc = VotingClassifier(estimators=classifier, voting='soft')
 
-    # vc.fit(X_train, y_train)
-    # y_prob = vc.predict_proba(X_train)
-    # y_prob_test = vc.predict_proba(X_test)
-    # best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
-    #     y_train, y_prob[:, 1])
-    # print('best threshold for train :', best_threshold_train,
-    #       '\n', 'best_f1_score_train', best_f1_score_train)
+    vc.fit(X_train, y_train)
+    y_prob = vc.predict_proba(X_train)
+    y_prob_test = vc.predict_proba(X_test)
+    best_threshold_train, best_f1_score_train = precision_recall_curve_different_thresholds(
+        y_train, y_prob[:, 1])
+    print('best threshold for train :', best_threshold_train,
+          '\n', 'best_f1_score_train', best_f1_score_train)
 
-    # f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
-    #                      threshold=best_threshold_train)
+    f1 = apply_threshold(y_prob=y_prob_test[:, 1], y_true=y_test,
+                         threshold=best_threshold_train)
 
-    # print('f1 score for test with threshold from  best_threshold_train  ', f1)
+    print('f1 score for test with threshold from  best_threshold_train  ', f1)
     '''
    Voting
    best threshold for train : 0.20669759883560124 
